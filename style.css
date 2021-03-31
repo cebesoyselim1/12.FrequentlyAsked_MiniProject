@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Playfair Display', serif;
+}
+
+body{
+    background-color: #f2f2f2;
+}
+
+.faq-container{
+    max-width: 600px;
+    width: 100%;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.faq-header{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.faq-card{
+    margin: 2rem 0;
+    padding: 1rem;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: transparent;
+    position: relative;
+}
+
+.faq-card.active{
+    background-color: white;
+}
+
+.faq-card-question{
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+    font-style: italic;
+}
+
+.faq-card-answer{
+    display: none;
+    margin-bottom: 2rem;
+}
+
+.faq-btn{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    transition: opacity 0.4s;
+}
+
+.faq-card-expand{
+    z-index: 1;
+}
+
+.bg-icons{
+    display: none;
+}
+
+.bg-icon-angry i{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 4rem;
+    z-index: 0;
+    color: rgba(196, 0, 0, 0.3);
+}
+
+.bg-icon-smile i{
+    position: absolute;
+    top: 45px;
+    left: 45px;
+    font-size: 4rem;
+    z-index: 0;
+    color: rgba(0, 165, 0, 0.3);
+}
+
+.faq-card.active .bg-icons{
+    display: block;
+}
+
+.faq-card.active .faq-card-answer{
+    display: block;
+}
+
+.faq-card.active .faq-card-expand{
+    z-index: -1;
+}
